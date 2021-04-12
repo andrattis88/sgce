@@ -1,0 +1,113 @@
+/*
+Copyright 2010 UNIPAMPA - Universidade Federal do Pampa
+
+Este arquivo é parte do programa SGCE - Sistema de Gestão de Certificados Eletrônicos
+
+O SGCE é um software livre; você pode redistribuí-lo e/ou modificá-lo dentro dos
+termos da Licença Pública Geral GNU como publicada pela Fundação do Software Livre
+(FSF); na versão 2 da Licença.
+
+Este programa é distribuído na esperança que possa ser útil, mas SEM NENHUMA GARANTIA;
+sem uma garantia implícita de ADEQUAÇÃO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR.
+Veja a Licença Pública Geral GNU/GPL em português para maiores detalhes.
+
+Você deve ter recebido uma cópia da Licença Pública Geral GNU, sob o título "LICENCA.txt",
+junto com este programa, se não, acesse o Portal do Software Público Brasileiro no
+endereço www.softwarepublico.gov.br ou escreva para a Fundação do Software Livre(FSF)
+Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+*/
+
+/* 
+    Document   : tabs
+    Created on : 22/10/2010, 16:31:50
+    Author     : Sergio Jr <sergiojunior@unipampa.edu.br>
+    Description: Estilo abas
+    Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.container {
+    width: 600px;
+    margin: 10px auto;
+}
+
+ul.tabs {
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	height: 32px;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	width: 100%;
+}
+
+ul.tabs li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 31px;
+	line-height: 31px;
+	border: 1px solid #999;
+	border-left: none;
+	margin-bottom: -1px;
+	background: #e0e0e0;
+	overflow: hidden;
+	position: relative;
+        font-family: arial;
+}
+
+ul.tabs li a {
+	text-decoration: none;
+	color: #000;
+	display: block;
+	padding: 0 20px;
+	border: 1px solid #fff;
+	outline: none;
+}
+
+ul.tabs li a:hover {
+	background: #ccc;
+}
+
+html ul.tabs li.active, html ul.tabs li.active a:hover  {
+	background: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.tab_container {
+	border: 1px solid #999;
+	border-top: none;
+	clear: both;
+	float: left;
+	width: 100%;
+        background: #fff;
+	height: auto;
+        overflow:auto;
+	-moz-border-radius-bottomright: 5px;
+	-khtml-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-khtml-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+}
+
+.tab_content {
+	padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+}
+
+.tab_content h2 {
+	font-weight: normal;
+	padding-bottom: 10px;
+	border-bottom: 1px dashed #ddd;
+}
+
+.tab_content h3 a{
+	color: #254588;
+}

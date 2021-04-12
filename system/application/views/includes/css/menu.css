@@ -1,0 +1,158 @@
+/*
+Copyright 2010 UNIPAMPA - Universidade Federal do Pampa
+
+Este arquivo é parte do programa SGCE - Sistema de Gestão de Certificados Eletrônicos
+
+O SGCE é um software livre; você pode redistribuí-lo e/ou modificá-lo dentro dos
+termos da Licença Pública Geral GNU como publicada pela Fundação do Software Livre
+(FSF); na versão 2 da Licença.
+
+Este programa é distribuído na esperança que possa ser útil, mas SEM NENHUMA GARANTIA;
+sem uma garantia implícita de ADEQUAÇÃO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR.
+Veja a Licença Pública Geral GNU/GPL em português para maiores detalhes.
+
+Você deve ter recebido uma cópia da Licença Pública Geral GNU, sob o título "LICENCA.txt",
+junto com este programa, se não, acesse o Portal do Software Público Brasileiro no
+endereço www.softwarepublico.gov.br ou escreva para a Fundação do Software Livre(FSF)
+Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+*/
+
+/**
+ *********************************************
+ * Prototype of styles for horizontal CSS-menu
+ * @data 25.01.2010
+ *********************************************
+ * (X)HTML-scheme:
+ *  <div id="menu">
+ *      <ul class="menu">
+ *          <li><a href="#" class="parent"><span>level 1</span></a>
+ *              <div><ul>
+ *                  <li><a href="#" class="parent"><span>level 2</span></a>
+ *                      <div><ul><li><a href="#"><span>level 3</span></a></li></ul></div>
+ *                  </li>
+ *              </ul></div>
+ *          </li>
+ *          <li class="last"><a href="#"><span>level 1</span></a></li>
+ *      </ul>
+ *  </div>
+ *********************************************
+ */
+
+/* menu::base */
+div#menu {
+    top:40px;
+    left:0px;
+    width:100%;
+}
+
+#menu {
+    margin-top: -5px;
+    margin-right: 250px;
+    float: right;
+    height:43px;
+}
+#menu .menu {
+    position:absolute;
+    padding-left: 40px;
+    background:  right top no-repeat; 
+}
+#menu * {
+    list-style:none;
+    border:0;
+    padding:0;
+    margin:0;
+}
+#menu a {
+    display:block;
+    padding:15px 14px 14px 14px;
+    white-space:nowrap;
+}
+#menu li {
+    float:left;
+    background:black;
+}
+#menu li li {
+    float:none;
+}
+#menu div {
+    visibility:hidden;
+    position:absolute;
+}
+#menu div div {
+    margin:-35px 0 0 -1px;
+    left:100%;
+}
+#menu div div div {
+    margin:-35px 0 0 -1px;
+    left:100%;
+}
+#menu li:hover>div { visibility:visible; }
+
+/* menu::special styles */
+/* menu::level 1 */
+#menu a {
+    text-decoration:none;
+    color:#3C4955;/*1*/
+    position:relative;
+    z-index:77;
+}
+#menu a:hover {
+    color:black;
+}
+#menu a:hover span { color:#FFF; }
+#menu li.current a {
+    color:black;
+}
+#menu li.current span {
+    color:black;
+}
+#menu>ul>li:hover>a {
+    background: left -43px repeat-x;
+    color:#CACFD3;
+}
+#menu>ul>li:hover>a span { color:green; }
+#menu span {
+    text-transform:uppercase;
+    font:12px 'Lucida Grande','Lucida Sans Unicode',Arial,Verdana,sans-serif;
+    letter-spacing:0.3em;
+    text-decoration:none;
+    color:#333;
+}
+#menu li { background: left top no-repeat;}
+/* menu::level >= 2 */
+#menu ul ul {width: 150px;}
+#menu li li{
+	  background:#44494B;
+	  border-bottom:1px solid #BABDBE;}
+#menu li li a {
+    position:static;
+    background:#44494B;
+    white-space:normal;
+    text-align: left;
+    color:#FFF;
+    padding:0;
+    text-transform:none;
+    width: 100%;
+}
+#menu li.current li a {
+    background: none;
+    color:#FFF;
+}
+#menu li.current li span {
+    color:#FFF;
+}
+#menu li li a:hover { background:#FA7E04; }
+#menu li li a span { color:#fff; line-height: 15px; padding: 10px;	}
+#menu li li a:hover span { color:black; }
+#menu li li a.parent span{
+    background: no-repeat scroll right 50%; z-index:10;
+    color: black;
+}
+
+#menu li li span {
+    display:block;
+    text-transform:none;
+    padding:0px 25px 0px 0px;
+    font-size:12px;
+    letter-spacing: 0;
+}

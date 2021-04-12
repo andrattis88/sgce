@@ -1,0 +1,572 @@
+/*
+Copyright 2010 UNIPAMPA - Universidade Federal do Pampa
+
+Este arquivo é parte do programa SGCE - Sistema de Gestão de Certificados Eletrônicos
+
+O SGCE é um software livre; você pode redistribuí-lo e/ou modificá-lo dentro dos
+termos da Licença Pública Geral GNU como publicada pela Fundação do Software Livre
+(FSF); na versão 2 da Licença.
+
+Este programa é distribuído na esperança que possa ser útil, mas SEM NENHUMA GARANTIA;
+sem uma garantia implícita de ADEQUAÇÃO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR.
+Veja a Licença Pública Geral GNU/GPL em português para maiores detalhes.
+
+Você deve ter recebido uma cópia da Licença Pública Geral GNU, sob o título "LICENCA.txt",
+junto com este programa, se não, acesse o Portal do Software Público Brasileiro no
+endereço www.softwarepublico.gov.br ou escreva para a Fundação do Software Livre(FSF)
+Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+*/
+
+/* 
+    Document   : estilo
+    Created on : 30/04/2010, 17:11:52
+    Author     : Daniel Michelon De Carli <daniel.de.carli@gmail.com>
+                 Sergio Junior <sergiojunior@unipampa.edu.br>
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: arial;
+    font-size: 12px;
+    text-align: center;
+}
+
+p {
+    text-align: left;
+}
+
+.center_table {
+    font-family: arial;
+    font-size: 12px;
+    border: 1px solid #444;
+    -webkit-box-shadow:#666 0px 2px 15px;
+    -moz-box-shadow:#666 0px 2px 15px;
+}
+
+.center_table_interna {
+    font-family: arial;
+    font-size: 12px;
+    border: 1px solid #444;
+    -webkit-box-shadow:#666 0px 2px 15px;
+    -moz-box-shadow:#666 0px 2px 15px;
+}
+
+
+#header_place{
+    height:190px;
+    color:#000000;
+    margin:0px;
+    
+}
+
+#header_place h1 {
+    font-size: 1.6em;
+}
+
+#header_logo{
+    background: url('../images/topo-certificados.jpg') no-repeat;
+    height: 190px;
+    width: 100%;
+    margin-left: 0px;
+    float: left;
+    overflow: visible;
+    margin-top: -25px;
+    
+}
+    
+#top_right{    
+    float: right;
+}
+
+.browserIE #top_right{
+    margin-top: 30px;
+    float: right;   
+}
+
+#top_right_menu{
+    margin-top: -10px;
+    margin-right: 10px;
+    float: right;
+}
+
+
+#menu_list{
+    font-size: 15px;
+    font-weight: bold;
+    list-style: none;
+}
+
+#menu_list li{
+    float: right;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: url('../images/fundo_menu.png') repeat-x #888;
+}
+
+a:link, a:visited{
+    color: #555; text-decoration: none;
+}
+
+a:hover {
+    color: #006613;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:active {
+    color: #006613;	
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+a img{
+    border-style: none;
+}
+
+#center_place{
+    margin-right: auto;
+    margin-left:  auto;
+    width: 960px;    
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.center_table{
+    margin-left: auto;
+    margin-right: auto;
+    color: #222;
+}
+
+.linha_par{
+    background: #c2d3c6;
+    font-weight: normal;
+}
+
+.linha_impar{
+    background: #FFF;
+    font-weight: normal;
+}
+
+#newRegister{
+    width: 400px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+    background: #555;
+    display: none;
+}
+
+#newRegister table{
+    color: #FFF;
+    font-weight: bold;
+}
+
+
+#newRegister br{
+    clear: left;
+}
+
+#searchRegister{
+    width: 955px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+    background: #666;
+}
+#searchRegister table{
+    color: #FFF;
+    font-weight: bold;
+}
+
+#searchRegister br{
+    clear: left;
+}
+
+
+
+label{
+    float: left;
+    width: 210px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.medium_input{
+    width: 100px;
+    margin-bottom: 5px;
+}
+
+.big_input{
+    width: 300px;
+    margin-bottom: 5px;
+}
+
+
+.form_left{
+    float: left;
+    margin-left: 30px;
+}
+
+
+.clear{
+    clear: both;
+}
+
+.high_lights{
+    background: #EDEDED;
+}
+
+.editing{
+    color: white;
+    background: black;
+}
+
+.deleting{
+    color: white;
+    background: red;
+}
+
+table{
+    width: 100%;
+    text-align: left;
+}
+
+#footer{
+    padding-top: 20px;
+    color: #777;
+    margin-top: 5px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    border: 1px solid #AAA;
+    height: 40px;
+    background: url('../images/fundo_header.gif') repeat-x;
+}
+
+.browserIE  #footer{
+    height: 60px;
+}
+
+.error{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left:  10px;
+    border: 1px solid white;
+    font-weight: bold;
+    font-size: 12px;
+    color: #555;
+}
+
+.message_field{
+    font-size: 18px;
+    color: #D50000;
+}
+
+.paginacao{
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.botoes_left{
+    right: auto;
+    text-align: left;
+}
+
+.titulo_right{
+    text-align: right;
+    float: right;
+    margin-top: -50px;
+}
+
+.titulo_popup{
+    text-align: right;
+}
+
+.browserIE .titulo_right{
+    margin-top: -45px;
+}
+
+.dialog{
+    display: none;
+    position: absolute;
+    border: 3px solid white;
+    margin-left: 600px;
+    color: white;
+    background: #333;
+    padding-left:  30px;
+    padding-right:   30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    opacity:0.95;
+    -webkit-box-shadow:#222 0px 2px 15px;
+    -moz-box-shadow:#222 0px 2px 15px;
+}
+
+#login_place{
+    border: 1px solid #555;
+    width: 400px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background: white;
+    color: #444;
+    
+    -webkit-box-shadow:#222 0px 2px 15px;
+    -moz-box-shadow:#222 0px 2px 15px;
+}
+
+.disabled_input{
+    background: #CCC;
+    border: none;
+}
+
+
+.disabled_input_data{
+    
+    border: none;
+}
+
+.ie6message{
+    color: #880000;
+    font-size: 18px;
+}
+
+button {
+    background-color: #FFFFFF;
+    border: 2px double #B0B0B0;
+}
+
+.aviso{
+    color: red;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+#apDiv1 {
+    position:absolute;
+    left:440px;
+    top:288px;
+    width:227px;
+    height:70px;
+    z-index:1;
+}
+    
+.titulo_tabela {
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;    
+}
+
+.div_visivel {
+    display : block;
+}
+
+.div_invisivel {
+    display : none;
+}
+
+
+.combo {
+    width: 335px;
+}
+
+#login_info {    
+    float: right;
+    margin-right: 200px;
+    top: 2px;
+    right: -25px;
+    font-size:12px;
+    z-index: 10;
+    position: relative;
+}
+
+sup {
+    font-size: 11px;
+    color: #006635;
+    font-family: Verdana;
+}
+
+.form_right{
+    float: left;
+    margin-right: 1px;
+    margin-left: 5px;
+}
+
+#tela_inicial {
+    width: 700px;
+    text-align: left;
+    float: left;
+}
+
+.linha1 {
+	height: 20px;
+	text-align: center;
+	font-size: 13px;
+    color: #fff;
+    background-color: #0e6195;
+    font-weight: bold;
+}
+
+
+.instrucao_campo {
+    text-align: left;
+    font-size: 10px;
+    color: grey;
+}
+
+#loading_organizadores {
+    display: none;
+}
+
+#loading_modelos {
+    display: none;
+}
+
+#loading_instrucoes {
+    display: none;
+}
+
+#loading_destinatarios {
+    display: none;
+}
+
+#instrucoes_importacao {
+      width:500px;
+      height:50px;
+      padding:10px;
+      background-color: #FFFFF4;
+      border-style: solid;
+      border-width: 1px;
+      opacity:0.95;
+      -webkit-box-shadow:#222 0px 2px 15px;
+      -moz-box-shadow:#222 0px 2px 15px;
+      overflow:auto;
+      display: none;
+}
+
+#progresso {
+      height:25px;
+      width:640px;
+      padding: 20px;
+      background-color: #FFFFF4;
+      border-style: solid;
+      border-width: 1px;
+      opacity:0.95;
+      -webkit-box-shadow:#222 0px 2px 15px;
+      -moz-box-shadow:#222 0px 2px 15px;
+      overflow:auto;
+}
+
+.div_status_certificado {
+    display: none;
+    width: 400px;
+    padding: 5px;
+    color: white;
+    background: #666;
+}
+
+#galeria {
+    background: #666;
+    color: #FFF;
+    padding: 5px;
+}
+
+#galeria_cabecalho {
+    background: #333333;
+    color: #FFF;
+    padding: 5px;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+#galeria_rodape {
+    background: #333333;
+    color: #FFF;
+    padding: 5px;
+
+}
+
+#galeria a {
+    color: #FFF;
+    font-weight: bold;
+}
+
+#nomeModelo {
+    background-color: #666;
+    border: 0px;
+}
+
+/*Estilo window modal*/
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:440px;
+  height:200px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+}
+
+
+#header_pesquisa {
+  background-color: #333;
+  border-style: solid;
+  border-width: 1px;
+  width: 95%;
+}
+
+.close {
+    display:block;
+    text-align:right;
+}
+
+#img_close {
+    border: 0px
+}
+
+.detalhes_log {
+    position:absolute;
+    left:50px;
+    top:80px;
+    width:650px;
+    height:150px;
+    display:none;
+    z-index:9999;
+    padding:20px;
+    overflow:auto;
+    background-color: #FFFFF4;
+    border-style: solid;
+    border-width: 1px;
+    opacity:0.95;
+    -webkit-box-shadow:#222 0px 2px 15px;
+    -moz-box-shadow:#222 0px 2px 15px;
+}
+/*Fim window modal*/
+
+.retorno_operacoes {
+    font-size: 14px;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+}

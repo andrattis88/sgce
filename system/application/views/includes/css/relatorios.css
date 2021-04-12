@@ -1,0 +1,392 @@
+/*
+Copyright 2010 UNIPAMPA - Universidade Federal do Pampa
+
+Este arquivo é parte do programa SGCE - Sistema de Gestão de Certificados Eletrônicos
+
+O SGCE é um software livre; você pode redistribuí-lo e/ou modificá-lo dentro dos
+termos da Licença Pública Geral GNU como publicada pela Fundação do Software Livre
+(FSF); na versão 2 da Licença.
+
+Este programa é distribuído na esperança que possa ser útil, mas SEM NENHUMA GARANTIA;
+sem uma garantia implícita de ADEQUAÇÃO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR.
+Veja a Licença Pública Geral GNU/GPL em português para maiores detalhes.
+
+Você deve ter recebido uma cópia da Licença Pública Geral GNU, sob o título "LICENCA.txt",
+junto com este programa, se não, acesse o Portal do Software Público Brasileiro no
+endereço www.softwarepublico.gov.br ou escreva para a Fundação do Software Livre(FSF)
+Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+*/
+
+/* General
+-----------------------------------------------------------------------*/
+body {
+  background-color: transparent;
+  color: black;
+  font-family: "verdana", "sans-serif";
+  margin-left: 10px;
+  padding-top: 0px;  
+  font-size: 0.8em;
+}
+
+@media print {
+  p { margin: 2px; }
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.05em;
+}
+
+img {
+  border: none;
+}
+
+p {
+  font-size: 0.8em;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+#money {
+  text-align: right;
+  padding-right: 20px;
+}
+
+/* Footer
+-----------------------------------------------------------------------*/
+#footer {
+  color: black;
+}
+
+#copyright {
+  padding: 5px;
+  font-size: 0.6em;
+  background-color: white;
+}
+
+#footer_spacer_row {
+  width: 100%;
+}
+
+#footer_spacer_row td {
+  padding: 0px;
+  border-bottom: 1px solid #000033;
+  background-color: #F7CF07;
+  height: 2px;
+  font-size: 2px;
+  line-height: 2px;
+}
+
+/* Section Header
+-----------------------------------------------------------------------*/
+#section_header {
+  text-align: center;
+}
+
+#job_header {
+  text-align: left;
+  background-color: white;
+  margin-left: 5px;
+  padding: 5px;
+  border: 1px dashed black;
+}
+
+#job_info {
+  font-weight: bold;
+}
+
+.header_details td {
+  font-size: 0.6em;
+}
+
+.header_label {
+  padding-left: 20px;
+}
+
+.header_field {
+  padding-left: 5px;
+  font-weight: bold;
+}
+
+/* Content
+-----------------------------------------------------------------------*/
+#content {
+  padding: 0.2em 1% 0.2em 1%;
+  min-height: 15em;
+}
+
+/* Detail
+-----------------------------------------------------------------------*/
+.detail_table {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 3px;
+  margin: 15px;
+}
+
+.detail_head td {
+  background-color: #ddd;
+  color: black;
+  font-weight: bold;
+  padding: 3px;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+.detail_head_tfoot {
+  background-color: #ddd;
+  color: black;
+  font-weight: bold;
+  padding: 3px;
+  font-size: 0.75em;      
+  border: 0px solid;
+}
+
+.detail_head_main td {
+  background-color: #ddd;
+  color: black;
+  font-weight: bold;
+  padding: 3px;
+  font-size: 0.75em;
+  text-align: left;
+}
+
+.detail_label {
+  padding: 3px;
+  font-size: 0.75em;
+  width: 16%;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  background-color: #ddd;
+}
+
+.detail_field {
+  width: 33%;
+  font-size: 0.8em;
+  color: black;
+  text-align: center;
+  padding: 3px;
+}
+
+.detail_field_main {
+  width: 33%;
+  font-size: 1em;
+  color: black;
+  text-align: left;
+  padding: 3px;
+}
+
+.detail_sub_table {
+  font-size: 1em;
+}
+
+.detail_spacer_row td {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background-color: #999;
+  font-size: 2px;
+  line-height: 2px;
+}
+
+#narrow {
+  width: 50%;
+}
+
+.operation {
+  width: 1%;
+}
+
+.summary_spacer_row {
+  font-size: 0.1em;
+}
+
+.bar {
+  border-top: 1px solid black;
+}
+
+.no_border_input input {
+  border: none;
+}
+
+.no_wrap {
+  white-space: nowrap;
+}
+
+tr.row_form td {
+  white-space: nowrap;
+}
+
+.sub_list_head td {
+  border: none;
+  font-size: 0.7em;
+}
+
+.odd_row td {
+/*  background-color: #EDF2F7;
+  border-top: 2px solid #FFFFff;*/
+  background-color: transparent;
+  border-bottom: 0.9px solid #ddd; /* 0.9 so table borders take precedence */
+}
+
+.even_row td {
+/*  background-color: #F8EEE4;
+  border-top: 3px solid #FFFFff;*/
+  background-color: #f6f6f6;
+  border-bottom: 0.9px solid #ddd;
+}
+
+.spacer_row td {
+  line-height: 2px;
+  font-size: 2px;
+}
+
+.phone_table td {
+  border: none;
+  font-size: 0.8em;
+}
+
+div.notif_list_text {
+  margin-bottom: 1px;
+  font-size: 1.1em;
+}
+
+.notif_list_row td.notif_list_job {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.65em;
+}
+
+.notif_list_row td.notif_list_dismiss table td {
+  text-align: center;
+  font-size: 1em;
+  border: none;
+  padding: 0px 2px 0px 2px;
+}
+
+.notif_list_row td {
+  padding: 5px 5px 7px 5px;
+  border-bottom: 1px dotted #ddd;
+  background-color: white;
+  font-size: 0.6em;
+}
+
+.notif_list_row:hover td {
+  background-color: #ddd;
+}
+
+/* Page
+-----------------------------------------------------------------------*/
+.page {
+  border: none;
+  padding: 0in;
+  margin-right: 0.1in;
+  margin-left: 0.1in;
+  /*margin: 0.33in 0.33in 0.4in 0.33in; */
+  background-color: transparent;
+}
+
+.page table.header h1{
+  font-size: 12pt;
+}
+
+.page>h2,
+.page>p {
+  margin-top: 2pt;
+  margin-bottom: 2pt;
+}
+
+.page h2 {
+  page-break-after: avoid;
+}
+
+
+
+/* Summaries
+-----------------------------------------------------------------------*/
+.summary {
+  border: 1px solid black;
+  background-color: white;
+  padding: 1%;
+  font-size: 0.8em;
+}
+
+.summary h1 {
+  color: black;
+  font-style: normal;
+}
+
+/* Sales-agreement specific
+-----------------------------------------------------------------------*/
+table.sa_signature_box {
+  margin: 2em auto 2em auto;
+}
+
+table.sa_signature_box tr td {
+  padding-top: 1.25em;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.special_conditions {
+  font-style: italic;
+  margin-left: 2em;
+  white-space: pre;
+}
+
+.sa_head * {
+  font-size: 7pt;
+}
+
+/* Change order specific
+-----------------------------------------------------------------------*/
+table.change_order_items {
+  font-size: 8pt;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+table.change_order_items>tbody {
+  border: 1px solid black;
+}
+
+table.change_order_items>tbody>tr>th {
+  border-bottom: 1px solid black;
+}
+
+table.change_order_items>tbody>tr>td {
+  border-right: 1px solid black;
+  padding: 0.5em;
+}
+
+td.change_order_total_col {
+  padding-right: 4pt;
+  text-align: right;
+}
+
+td.change_order_unit_col {
+  padding-left: 2pt;
+  text-align: left;
+}
+
+.total_label {
+  background-color: #ddd;
+  color: black;
+  font-weight: bold;  
+  font-size: 1em;
+  border-spacing: 0px;
+  padding: 5px;  
+  text-align: right;
+  width: 85%;
+}
